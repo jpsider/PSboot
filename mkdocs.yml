@@ -1,0 +1,12 @@
+site_name: psboot
+repo_url: https://github.com/jpsider/psboot
+theme: readthedocs
+edit_uri: edit/master/docs/
+pages:
+- Home: index.md
+- psboot Basics:
+  - What is psboot: about.md
+  - Quick Start: Quick-Start-Installation-and-Example.md
+- Basic Commands:
+- Examples:
+- Acknowledgements: acknowledgements.md
