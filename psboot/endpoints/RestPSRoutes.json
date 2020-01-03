@@ -1,0 +1,17 @@
+[
+  {
+    "RequestType": "GET",
+    "RequestURL": "/mgmt/status",
+    "RequestCommand": "return 1"
+  },
+  {
+    "RequestType": "GET",
+    "RequestURL": "/mgmt/info",
+    "RequestCommand": "return 1"
+  },
+  {
+    "RequestType": "GET",
+    "RequestURL": "/mgmt/routes",
+    "RequestCommand": "/psboot/endPoints/GET/Invoke-GetRoutes.ps1"
+  }
+]

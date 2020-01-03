@@ -1,0 +1,63 @@
+use PSBoot;
+
+-- Status
+INSERT INTO STATUS (ID,STATUS_NAME,HTMLCOLOR,HTML_Description) 
+VALUES 
+(1,'Enabled','#006633','Green'),
+(2,'Disabled','#CC0000','Red'),
+(3,'Available','#00CC66','LightGreen'),
+(4,'Staged','#99CCFF','Light Blue');
+
+-- Systems
+INSERT INTO SYSTEMS (ID,SYSTEM_NAME,STATUS_ID)
+VALUES
+(1,'PRODUCTION',1),
+(2,'DEVELOPMENT',1);
+
+-- Applications
+INSERT INTO APPLICATIONS (ID,APPLICATION_NAME,STATUS_ID)
+VALUES
+(1,'vSphereMgmt',1),
+(2,'TestApp',1);
+
+-- Application Versions
+INSERT INTO APPLICATION_VERSIONS (ID,APPLICATION_VERSION,APPLICATION_ID,STATUS_ID)
+VALUES
+(1,'1.0.0',1,1),
+(2,'1.0.1',1,1),
+(3,'1.0.0',2,1),
+(4,'2.0.0',2,1);
+
+-- Modules
+INSERT INTO MODULES (ID,MODULE_NAME,STATUS_ID)
+VALUES
+(1,'VMware.PowerCLI',1),
+(2,'RestPS',1),
+(3,'ClarityPS',1),
+(4,'ReportCardPS',1);
+
+-- Module Versions
+INSERT INTO MODULE_VERSIONS (ID,MODULE_ID,MODULE_VERSION,STATUS_ID)
+VALUES
+(1,1,'11.4.0.14413515',1),
+(2,2,'7.0.12',2),
+(3,3,'0.0.2',3),
+(4,4,'0.0.1',4);
+
+-- System Applications
+INSERT INTO SYSTEM_APPLICATIONS (ID,SYSTEM_ID,APP_VER_ID,STATUS_ID)
+VALUES
+(1,1,1,1),
+(2,1,3,1),
+(3,2,2,1),
+(4,2,4,1),
+(5,2,1,2),
+(6,2,3,2);
+
+-- Application Modules
+INSERT INTO APPLICATION_MODULES (ID,MOD_VER_ID,APP_VER_ID,STATUS_ID)
+VALUES
+(1,1,1,1),
+(2,3,1,1),
+(3,4,1,1),
+(4,2,3,1);
