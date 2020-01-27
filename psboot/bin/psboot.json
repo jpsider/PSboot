@@ -1,0 +1,14 @@
+{
+  "Modules": [{
+      "Name": "VMware.PowerCLI",
+      "RequiredVersion": "11.4.0.14413515"
+    },
+    {
+      "Name": "ReportcardPS",
+      "RequiredVersion": "0.0.1"
+    }
+  ],
+  "PSRepository": {
+    "Name": "$null"
+  }
+}
