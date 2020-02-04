@@ -17,7 +17,7 @@ else
 if (($null -eq $psRepository) -or ($psRepository -eq "") -or ($psRepository -eq '$null'))
 {
     # do not change the PSRepository
-    Write-Host "Not Changing the PSRepository"
+    Write-Output "Not Changing the PSRepository"
 }
 else
 {
@@ -30,7 +30,7 @@ Foreach ($module in $modulesToInstall)
     # Install the modules
     $ModuleName = $Module.Name
     $ModuleVersion = $Module.RequiredVersion
-    Write-Host "Installing Module: $ModuleName Version: $ModuleVersion"
+    Write-Output "Installing Module: $ModuleName Version: $ModuleVersion"
 }
 
 # Start a Job with the PSBoot RestPS endpoint
